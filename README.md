@@ -1,12 +1,3 @@
----
-title: "How to use the multEvol package"
-author: "Dipendra Nath Basu and Vaishali Bhaumik"
-date: '2022-08'
-output: 
-  html_document: 
-    toc: yes
----
-
 # I. Introduction
 
 The `multEvol` package performs data extraction and phylogenetic analyses of shape and colour pattern data from 2D images. This document provides some example code to demonstrate how the package works.
