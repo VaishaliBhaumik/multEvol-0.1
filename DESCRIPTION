@@ -1,8 +1,17 @@
 Package: multEvol
 Title: An interactive pipeline for multitrait evolutionary analysis in a phylogenetic framework
 Version: 0.1.0
-Author: Dipendra Nath Basu, Vaishali Bhaumik
-Maintainer: Dipendra Nath Basu <dipendra1989@gmail.com>
+Authors@R: c(person(given = "Dipendra Nath",
+           family = "Basu",
+           role = c("aut", "cre"),
+           email = "dipendranb.ncbs@gmail.com"),
+           person(given = "Vaishali",
+           family = "Bhaumik",
+           role = "aut"),
+           person(given = "Krushnamegh",
+           family = "Kunte",
+           role = "dtc"))
+Maintainer: Dipendra Nath Basu <dipendranb.ncbs@gmail.com>
 Description: An interactive pipeline for the extraction and phylogenetic analysis of shape and colour pattern data from 2D images in the R statistical computing environment. Using this pipeline, shape outlines and colour pattern data for multiple colours can be extracted, visualised, and compared in a phylogenetic framework.
 BugReports: https://github.com/DipendraBasu/multEvol-0.1/issues
 URL: https://github.com/DipendraBasu/multEvol-0.1
