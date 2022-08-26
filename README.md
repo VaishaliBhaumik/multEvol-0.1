@@ -1,6 +1,7 @@
 # I. Introduction
+<p> The `multEvol` package performs data extraction and phylogenetic analyses of shape and colour pattern data from 2D images. This document provides some example code to demonstrate how the package works. <img src="https://user-images.githubusercontent.com/95079089/186921964-65990417-51e8-470c-afce-bda840faa482.jpg" alt="patternize" width="300" align="right"></p>
 
-The `multEvol` package performs data extraction and phylogenetic analyses of shape and colour pattern data from 2D images. This document provides some example code to demonstrate how the package works.
+
 
 ## (a) Study system
 
@@ -52,17 +53,19 @@ The `binImg()` function creates black & white versions of each image:
 im_path<-system.file("/extdata/img_folder/", package="multEvol")
 binImg(img_path = im_path, thresh = 0.97, dimn = 100, out_path = "binary_images/")
 ```
-<center>
-	
-![Original](https://user-images.githubusercontent.com/95079089/186912332-88716373-ca9b-4d94-b260-a358db983f3d.jpg)
 
+<p align="center">
+  <img width="300" height="300" src="https://user-images.githubusercontent.com/95079089/186912332-88716373-ca9b-4d94-b260-a358db983f3d.jpg">
+</p>	
+<p align="center">
 Original
-	
-![Black & white](https://user-images.githubusercontent.com/95079089/186913641-292a3143-4357-451f-a059-33168acb710a.jpg "Vlack and white")
-
+</p>
+<p align="center">
+<img width="300" height="300" src="https://user-images.githubusercontent.com/95079089/186913641-292a3143-4357-451f-a059-33168acb710a.jpg">
+</p>
+<p align="center">
 Black & white
-
-</center>
+</p>
 
 ## (b) Extracting Fourier descriptors
 Next, the `cleqEFA()` function uses the outputs of `binImg()` to extract shape data:
@@ -88,13 +91,14 @@ The third prompt requests the direction (up/down/right/left) in which the start 
 ```
 The function plots an image showing all the outlines stacked and aligned against each other:
 
-<center>
 
-![Contour_stack](https://user-images.githubusercontent.com/95079089/186915411-ec3fbe46-9f3d-4b70-9912-777d9060a98c.jpg)
-	
+<p align="center">
+<img width="400" height="400" src="https://user-images.githubusercontent.com/95079089/186915411-ec3fbe46-9f3d-4b70-9912-777d9060a98c.jpg">
+</p>
+<p align="center">
 Stacked outlines
+</p>
 
-</center>
 
 The fourth prompt requests permission to continue on to the next step. If the stacked outlines seem appropriately aligned, enter "y". If not, enter "n" and the entire function will loop, requesting different alignment options.
 ```
@@ -104,17 +108,18 @@ The fifth prompt requests the name of a target image (e.g., "Tiru_septFe1") that
 ```
 	Target image name (without extension): Tiru_septFe1
 ```
-<center>
-
-![Elliptical_analysis](https://user-images.githubusercontent.com/95079089/186915658-5b759235-6dfb-4af1-9016-765a4b648aff.jpg)
-
+<p align="center">
+<img width="400" height="400" src="https://user-images.githubusercontent.com/95079089/186915658-5b759235-6dfb-4af1-9016-765a4b648aff.jpg">
+</p>
+<p align="center">
 Elliptical analysis
-
-![Ellipse_fit](https://user-images.githubusercontent.com/95079089/186915787-418ed612-eb48-42ae-bea2-e5e3c304b9eb.jpg)
-	
+</p>
+<p align="center">
+<img width="400" height="400" src="https://user-images.githubusercontent.com/95079089/186915787-418ed612-eb48-42ae-bea2-e5e3c304b9eb.jpg">
+</p>
+<p align="center">
 Ellipse fit
-
-</center>
+</p>
 
 The sixth prompt requests the number of harmonics to be used for calibration when estimating the appropriate minimum number of harmonics that can explain all the shapes. This number should be relatively high (15--20) for explaining simple shapes:
 ```
@@ -123,13 +128,12 @@ The sixth prompt requests the number of harmonics to be used for calibration whe
 
 Based on the input, the function calibrates the harmonic power and saves a boxplot visualizing the percentage of the shape that is accurately described by a given number of harmonics:
 
-<center>
-
-![Harmonic_power](https://user-images.githubusercontent.com/95079089/186916053-917a7bab-488a-4f8c-85bf-3ef7f8981d54.png)
-	
+<p align="center">
+<img width="400" height="400" src="https://user-images.githubusercontent.com/95079089/186916053-917a7bab-488a-4f8c-85bf-3ef7f8981d54.png">
+</p>
+<p align="center">
 Harmonic power
-
-</center>
+</p>
 
 The seventh prompt requests the number of harmonics that the `efourier()` function should use. This number can be decided upon based on the previous boxplot, which is saved as a .pdf file ("Harmonic_power.pdf") in the output folder. In case all other harmonics need to be scaled against the first harmonic, choose one extra harmonic. In this case, seven harmonics would explain 99% of the variance in shape. To account for scaling against the first harmonic, the input should be "8":
 ```
@@ -154,13 +158,12 @@ The `shpComp()` function visualizes inter-group differences in the form of defor
 gr1 <- gr2 <- col_index[, 1][3:6]
 shpComp(gr1, gr2, mnshps)
 ```
-<center>
-
-![Shape_comparison](https://user-images.githubusercontent.com/95079089/186916207-b9881a26-9556-43a9-bbf8-465cbcf63cfb.png)
-
+<p align="center">
+<img width="400" height="400" src="https://user-images.githubusercontent.com/95079089/186916207-b9881a26-9556-43a9-bbf8-465cbcf63cfb.png">
+</p>
+<p align="center">
 Wing shape deformations
-
-</center>
+</p>
 
 # III. Colour data
 
@@ -176,21 +179,26 @@ Then, select a group (e.g., "Tiru_sept") whose target image ("Tiru_septFe1.jpg")
 ```
     affTr(img_path = "img_folder/", img_ID = col_index, target = "Tiru_sept", out_path = "transformed_folder/")
 ```
-<center>
-
-![Colo_auroMa5_orig](https://user-images.githubusercontent.com/95079089/186916404-b1d28e91-8fdf-4136-90fb-9cbfc90366a4.jpg)
-	
+<p align="center">
+<img width="300" height="300" src="https://user-images.githubusercontent.com/95079089/186916404-b1d28e91-8fdf-4136-90fb-9cbfc90366a4.jpg">
+</p>
+<p align="center">
 Original (Colo_auroMa5.jpg)
+</p>
 
-![Tiru_septFe1](https://user-images.githubusercontent.com/95079089/186916465-0d32c02b-a8ca-4a5c-9965-7f5c4e001b54.jpg)
-	
+<p align="center">
+<img width="300" height="300" src="https://user-images.githubusercontent.com/95079089/186916465-0d32c02b-a8ca-4a5c-9965-7f5c4e001b54.jpg">
+</p>
+<p align="center">
 Target (Tiru_septFe1.jpg)
+</p>
 
-![Colo_auroMa5_tra](https://user-images.githubusercontent.com/95079089/186916523-e653fcb3-eaf4-4af3-a830-f3fe635de623.jpg)
-	
-Transformed (Colo_auroMa5.jpg
-
-</center>
+<p align="center">
+<img width="300" height="300" src="https://user-images.githubusercontent.com/95079089/186916523-e653fcb3-eaf4-4af3-a830-f3fe635de623.jpg">
+</p>
+<p align="center">
+Transformed (Colo_auroMa5.jpg)
+</p>
 
 This image registration produces borders around the image, which have to be removed. This can be done in any image editing software.
 
@@ -226,23 +234,21 @@ Choose colour offset (1=0.05; 2=0.1; 3=0.15; 4=0.2; 5=0.25; 6= 0.3; 7=0.35; 8= 0
 ```
 The plot window displays the target image for the first species in the list (Colo_auro).
 
-<center>
-
-![Colo_auroMa5_tra](https://user-images.githubusercontent.com/95079089/186916523-e653fcb3-eaf4-4af3-a830-f3fe635de623.jpg)
-
+<p align="center">
+<img width="300" height="300" src="https://user-images.githubusercontent.com/95079089/186916523-e653fcb3-eaf4-4af3-a830-f3fe635de623.jpg">
+</p>
+<p align="center">
 Transformed Colo_auroMa5.jpg
-
-</center>
+</p>
 
 Clicking on any part of the image inputs an RGB value to which the offset is applied. Pixels with the resulting range of RGB values are highlighted in each image in the group, and these plots are stacked on top of each other. For red/orange colours, click on the part of the wing that contains the orange pigment. Given an offset of 0.2 and an RGB input of [192 87 4], the resulting stacked image for "Colo_auro" might look something like this (note that the image is flipped on the vertical axis):
 
-<center>
-
-![RED_Colo_auro](https://user-images.githubusercontent.com/95079089/186916798-ecdb9d01-0cd1-4a5d-b036-783393189ae1.png)
-
+<p align="center">
+<img width="100" height="100" src="https://user-images.githubusercontent.com/95079089/186916798-ecdb9d01-0cd1-4a5d-b036-783393189ae1.png">
+</p>
+<p align="center">
 Orange colours in Colo_auro (5 images, downsampled 3X)	
-	
-</center>
+</p>
 
 The next prompt asks whether the function should continue to the next species/group. If the stacked image looks okay, enter "y". If not, enter "n" (or really anything except "y"). The function loops back and requests the colour offset again, and this goes on until you are satisfied with the colour sampling output.
 ```
@@ -272,13 +278,12 @@ The `colComp()` function visualizes intra- and inter- group variations in colour
 gr1<-gr2<-col_index[,1][3:6]
 colComp(gr1, gr2, rstrstcks = MEL_RasterStacks, ID = MEL_IDList, outline_path = "outline/", bcg_col = "dimgray", font_col = "white")
 ```
-<center>
-
-![Colour_comparison](https://user-images.githubusercontent.com/95079089/186917046-1c983ad9-c424-4bbb-aa42-3437ce4bb0cb.png)
-
-Colour pattern variations within and between four butterfly species	
-	
-</center>
+<p align="center">
+<img width="400" height="400" src="https://user-images.githubusercontent.com/95079089/186917046-1c983ad9-c424-4bbb-aa42-3437ce4bb0cb.png">
+</p>
+<p align="center">
+Colour pattern variations within and between four butterfly species
+</p>
 
 # IV. Phylogenetic analysis
 
