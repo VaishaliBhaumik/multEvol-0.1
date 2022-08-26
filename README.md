@@ -39,14 +39,19 @@ These input files are also required:
 1.  **col_index**: A dataframe containing the names of species/groups to be included in analysis (column 1) and the sequence number of the target image for each group (column 2).
 2.  **wg_tree**: A phylogenetic tree containing all species/groups to be analyzed.
 
+
+## (d) Package installation
+The package can be installed directly from GitHub:
+
+```
+devtools::install_github("DipendraBasu/multEvol-0.1")
+library(multEvol)
+```
+
 # II. Shape data
 
 Shape data are extracted through elliptical Fourier analysis to quantify the 2D closed contours. These data are extracted with the `binImg()` and `cleqEFA()` functions.
 
-Load the package:
-```
-    library(multEvol)
-```
 ## (a) Transforming into binary images
 The `binImg()` function creates black & white versions of each image:
 ```
