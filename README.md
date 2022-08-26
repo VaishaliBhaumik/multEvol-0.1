@@ -54,9 +54,9 @@ binImg(img_path = im_path, thresh = 0.97, dimn = 100, out_path = "binary_images/
 ```
 <center>
 
-![Original](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Pare_hipfFe2_col.jpg?token=GHSAT0AAAAAABX6R33ONQHUOGM5ZDEQLGOGYYFBHQQ){width="100px;" height="100px"}
+![Pare_hipfFe2_col](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Pare_hipfFe2_col.jpg?token=GHSAT0AAAAAABX6R33ONQHUOGM5ZDEQLGOGYYFBHQQ){width="100px;" height="100px"}
 
-![Black & white](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Pare_hipfFe2_bin.jpg?token=GHSAT0AAAAAABX6R33OW2MGX7FROMW2E4ROYYFBHRA){width="100px;" height="100px"}
+![Pare_hipfFe2_bin](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Pare_hipfFe2_bin.jpg?token=GHSAT0AAAAAABX6R33OW2MGX7FROMW2E4ROYYFBHRA){width="100px;" height="100px"}
 
 </center>
 
