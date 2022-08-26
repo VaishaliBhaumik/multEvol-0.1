@@ -240,7 +240,7 @@ Clicking on any part of the image inputs an RGB value to which the offset is app
 
 ![RED_Colo_auro](https://user-images.githubusercontent.com/95079089/186916798-ecdb9d01-0cd1-4a5d-b036-783393189ae1.png)
 
-Orange colours in Colo_auro (5 images)	
+Orange colours in Colo_auro (5 images)[Downsamples 3X]	
 	
 </center>
 
