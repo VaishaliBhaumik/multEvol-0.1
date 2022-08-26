@@ -3,7 +3,7 @@
 
 ## (a) Study system
 
-This example uses a subset of the images that were analysed in our [biorXiv manuscript](https://www.biorxiv.org/content/10.1101/2022.06.19.496720v1). In total, 29 images of individual forewings (5 species/sex combinations; 4--5 images per species/sex combination) are being used to evaluate mimetic convergence in forewing colour patterns between species. The wings were photographed under constant light conditions and the images were cleaned in Adobe Photoshop to remove the background and to repair any damage due to scale loss or tearing. Cleaned forewing images (.jpg) of the following species were included:
+This example uses a subset of the images that were analysed in our [biorXiv manuscript](https://www.biorxiv.org/content/10.1101/2022.06.19.496720v1). In total, 29 images of individual forewings (5 species/sex combinations; 4–5 images per species/sex combination) are being used to evaluate mimetic convergence in forewing colour patterns between species. The wings were photographed under constant light conditions and the images were cleaned in Adobe Photoshop to remove the background and to repair any damage due to scale loss or tearing. Cleaned forewing images (.jpg) of the following species were included:
 
 1.  **Model species**: *Tirumala septentrionis* (Tiru_sept) and *Parantica aglea* (Para_agle).
 
@@ -21,7 +21,7 @@ abbreviated species name (9 characters) + sex (2 characters) + sequence number (
 
 For example, the second forewing image for female *Pareronia hippia* was named "Pare_hipfFe2.jpg". The number of characters in the species name (9 characters in this case) <b>should remain consistent across all image files</b>, as this will be important for species-level grouping during analysis.
 
-## (b) Data organisation -- folders
+## (b) Data organisation – folders
 
 Since extracting and analysing these data is a multistep process with several intermediate outputs, create some folders in your working directory to organise the input and output files. The names and contents of these folders are listed below. All folders apart from **img_folder** should be empty at the beginning of the analysis.
 
@@ -30,7 +30,7 @@ Since extracting and analysing these data is a multistep process with several in
 3.  **transformed_folder**: Affine-transformed target images against which other images can be aligned during data extraction for colour patterns.
 4.  **output_folder**: All output files, including intermediate data files, statistical results, and stacked images.
 
-## (c) Data organisation -- files
+## (c) Data organisation – files
 
 These input files are also required:
 
@@ -125,7 +125,7 @@ Elliptical analysis
 Ellipse fit
 </p>
 
-The sixth prompt requests the number of harmonics to be used for calibration when estimating the appropriate minimum number of harmonics that can explain all the shapes. This number should be relatively high (15--20) for explaining simple shapes:
+The sixth prompt requests the number of harmonics to be used for calibration when estimating the appropriate minimum number of harmonics that can explain all the shapes. This number should be relatively high (15–20) for explaining simple shapes:
 ```
 	Number of harmonics for calibration: 15
 ```
@@ -320,14 +320,14 @@ Convergence can be estimated between various groups of models and mimics. The na
 regimes <- list(mod_mim1 = c("Para_agle", "Pare_hipf"), mod_mim2 = c("Tiru_sept", "Pare_hipf"))
 ```
 
-The `cIndex()` function estimates convergence indices (C1--C4) using the `convratsig()` function in the `convevol` package. The inputs are a vector or data matrix containing principal components (PCA_col), a phylogenetic tree (wg_tree), and a list of species combinations (regimes). The number of principal components to be used for analysis and the number of simulations can be specified:
+The `cIndex()` function estimates convergence indices (C1–C4) using the `convratsig()` function in the `convevol` package. The inputs are a vector or data matrix containing principal components (PCA_col), a phylogenetic tree (wg_tree), and a list of species combinations (regimes). The number of principal components to be used for analysis and the number of simulations can be specified:
 
 ```
 cIndex(x = PCA_col, y = wg_tree, z = regimes, dimn = 4, nsim = 1000)
 ```
 The output includes the following:
 
-1. **C indices** (C1--C4) indicating the extent of convergence among various groups of species.
+1. **C indices** (C1–C4) indicating the extent of convergence among various groups of species.
 
 2. **Simulated null distributions** of C indices, estimated using a Brownian motion model.
 
