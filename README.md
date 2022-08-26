@@ -47,6 +47,7 @@ The package can be installed directly from GitHub:
 devtools::install_github("DipendraBasu/multEvol-0.1")
 library(multEvol)
 ```
+Please report any issues with the package [here](https://github.com/DipendraBasu/multEvol-0.1/issues).
 
 # II. Shape data
 
