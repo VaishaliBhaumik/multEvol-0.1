@@ -53,10 +53,14 @@ im_path<-system.file("/extdata/img_folder/", package="multEvol")
 binImg(img_path = im_path, thresh = 0.97, dimn = 100, out_path = "binary_images/")
 ```
 <center>
-
+	
 ![Original](https://user-images.githubusercontent.com/95079089/186912332-88716373-ca9b-4d94-b260-a358db983f3d.jpg)
 
-![Black & white](https://user-images.githubusercontent.com/95079089/186912815-c06a039c-a0cf-4a60-8a82-498040e5841c.jpg)
+Original
+	
+![Black & white](https://user-images.githubusercontent.com/95079089/186913641-292a3143-4357-451f-a059-33168acb710a.jpg "Vlack and white")
+
+Black & white
 
 </center>
 
@@ -68,7 +72,7 @@ Next, the `cleqEFA()` function uses the outputs of `binImg()` to extract shape d
 This function is interactive and requires several user inputs. The first prompt requests the minimum number of characters that defines species/groups. For the image files being used here, this number is 9 (for an explanation, see section I(a) Study system):
 ```
     Number of characters in group name: 9
-```	
+```
 The second prompt requests the alignment procedure based on which the outlines will be aligned (see documentation for the `Momocs` package). Options are provided for Eigen value-based alignment along:
 
 1. The longer axis (`coo_align()`).
@@ -86,7 +90,9 @@ The function plots an image showing all the outlines stacked and aligned against
 
 <center>
 
-![Stacked outlines](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Contour_stack.jpg?token=GHSAT0AAAAAABX6R33OQ7RVID43YPBW57K4YYFBA2Q){width="400px;" height="400px"}
+![Contour_stack](https://user-images.githubusercontent.com/95079089/186915411-ec3fbe46-9f3d-4b70-9912-777d9060a98c.jpg)
+	
+Stacked outlines
 
 </center>
 
@@ -100,9 +106,13 @@ The fifth prompt requests the name of a target image (e.g., "Tiru_septFe1") that
 ```
 <center>
 
-![Elliptical analysis](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Elliptical_analysis.jpg?token=GHSAT0AAAAAABX6R33PSTNQTV3J4DMOGMECYYFBD6Q){width="400px;" height="400px"}
+![Elliptical_analysis](https://user-images.githubusercontent.com/95079089/186915658-5b759235-6dfb-4af1-9016-765a4b648aff.jpg)
 
-![Ellipse fit](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Ellipse_fit.jpg?token=GHSAT0AAAAAABX6R33ODMKFQE3AGQJS54ZWYYFBEWA){width="400px;" height="400px"}
+Elliptical analysis
+
+![Ellipse_fit](https://user-images.githubusercontent.com/95079089/186915787-418ed612-eb48-42ae-bea2-e5e3c304b9eb.jpg)
+	
+Ellipse fit
 
 </center>
 
@@ -115,7 +125,9 @@ Based on the input, the function calibrates the harmonic power and saves a boxpl
 
 <center>
 
-![Harmonic power](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Harmonic_power.png?token=GHSAT0AAAAAABX6R33OVLMDJX7ME3OBOE6UYYFBD7A){width="400px;" height="400px"}
+![Harmonic_power](https://user-images.githubusercontent.com/95079089/186916053-917a7bab-488a-4f8c-85bf-3ef7f8981d54.png)
+	
+Harmonic power
 
 </center>
 
@@ -144,7 +156,9 @@ shpComp(gr1, gr2, mnshps)
 ```
 <center>
 
-![Wing shape deformations between four butterfly species](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Shape_comparison.png?token=GHSAT0AAAAAABX6R33OQRI5VETC3AQ53SHWYYFA6HQ){width="400px;" height="400px"}
+![Shape_comparison](https://user-images.githubusercontent.com/95079089/186916207-b9881a26-9556-43a9-bbf8-465cbcf63cfb.png)
+
+Wing shape deformations
 
 </center>
 
@@ -164,11 +178,17 @@ Then, select a group (e.g., "Tiru_sept") whose target image ("Tiru_septFe1.jpg")
 ```
 <center>
 
-![Original (Colo_auroMa5.jpg)](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Colo_auroMa5_orig.jpg?token=GHSAT0AAAAAABX6R33OY6Z26CQ5FXKXPO7CYYFBFIQ){width="100px;" height="100px"}
+![Colo_auroMa5_orig](https://user-images.githubusercontent.com/95079089/186916404-b1d28e91-8fdf-4136-90fb-9cbfc90366a4.jpg)
+	
+Original (Colo_auroMa5.jpg)
 
-![Target (Tiru_septFe1.jpg)](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Tiru_septFe1.jpg?token=GHSAT0AAAAAABX6R33P6TRCPPDJLJV75L4UYYFBFJA){width="100px;" height="100px"}
+![Tiru_septFe1](https://user-images.githubusercontent.com/95079089/186916465-0d32c02b-a8ca-4a5c-9965-7f5c4e001b54.jpg)
+	
+Target (Tiru_septFe1.jpg)
 
-![Transformed (Colo_auroMa5.jpg)](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Colo_auroMa5_tra.jpg?token=GHSAT0AAAAAABX6R33PSVZHIGV7YY3LHMC4YYFBFKA){width="100px;" height="100px"}
+![Colo_auroMa5_tra](https://user-images.githubusercontent.com/95079089/186916523-e653fcb3-eaf4-4af3-a830-f3fe635de623.jpg)
+	
+Transformed (Colo_auroMa5.jpg
 
 </center>
 
@@ -208,7 +228,9 @@ The plot window displays the target image for the first species in the list (Col
 
 <center>
 
-![Transformed Colo_auroMa5.jpg](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Colo_auroMa5_tra.jpg?token=GHSAT0AAAAAABX6R33PSVZHIGV7YY3LHMC4YYFBFKA){width="100px;" height="100"}
+![Colo_auroMa5_tra](https://user-images.githubusercontent.com/95079089/186916523-e653fcb3-eaf4-4af3-a830-f3fe635de623.jpg)
+
+Transformed Colo_auroMa5.jpg
 
 </center>
 
@@ -216,8 +238,10 @@ Clicking on any part of the image inputs an RGB value to which the offset is app
 
 <center>
 
-![Orange colours in Colo_auro (5 images)](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/RED_Colo_auro.png?token=GHSAT0AAAAAABX6R33PCEJGR66XRASQFOYQYYFBHYQ){width="100px;" height="100px"}
+![RED_Colo_auro](https://user-images.githubusercontent.com/95079089/186916798-ecdb9d01-0cd1-4a5d-b036-783393189ae1.png)
 
+Orange colours in Colo_auro (5 images)	
+	
 </center>
 
 The next prompt asks whether the function should continue to the next species/group. If the stacked image looks okay, enter "y". If not, enter "n" (or really anything except "y"). The function loops back and requests the colour offset again, and this goes on until you are satisfied with the colour sampling output.
@@ -250,8 +274,10 @@ colComp(gr1, gr2, rstrstcks = MEL_RasterStacks, ID = MEL_IDList, outline_path = 
 ```
 <center>
 
-![Colour pattern variations within and between four butterfly species](https://raw.githubusercontent.com/DipendraBasu/multEvol_Images/main/Colour_comparison.png?token=GHSAT0AAAAAABX6R33OII5HGHFLCGVKBMXMYYFBGVQ){width="400px;" height="400px"}
+![Colour_comparison](https://user-images.githubusercontent.com/95079089/186917046-1c983ad9-c424-4bbb-aa42-3437ce4bb0cb.png)
 
+Colour pattern variations within and between four butterfly species	
+	
 </center>
 
 # IV. Phylogenetic analysis
