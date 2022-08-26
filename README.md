@@ -143,7 +143,7 @@ The seventh prompt requests the number of harmonics that the `efourier()` functi
 ```
 	Number of harmonics for Fourier analysis: 8
 ```
-The eighth prompt inquires whether all the other harmonics should be scaled against the first harmonic (which is essentuially the centroid). Since we selected the eight harmonics, we will get descriptors for the seven harmonics at the expense of the first hasrmonics approximating 99% of the shape:
+The eighth prompt inquires whether all the other harmonics should be scaled against the first harmonic (which is essentuially the centroid). Since we selected eight harmonics, the function will generate descriptors for seven harmonics at the expense of the first harmonic and approximate 99% of the shape:
 
 ```
 	Normalize the harmonics coefficients (y/n): y
