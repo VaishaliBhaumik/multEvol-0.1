@@ -1,8 +1,6 @@
 # I. Introduction
 <p> The `multEvol` package performs data extraction and phylogenetic analyses of shape and colour pattern data from 2D images. This document provides some example code to demonstrate how the package works. <img src="https://user-images.githubusercontent.com/95079089/186921964-65990417-51e8-470c-afce-bda840faa482.jpg" alt="patternize" width="300" align="right"></p>
 
-
-
 ## (a) Study system
 
 This example uses a subset of the images that were analysed in our [biorXiv manuscript](https://www.biorxiv.org/content/10.1101/2022.06.19.496720v1). In total, 29 images of individual forewings (5 species/sex combinations; 4--5 images per species/sex combination) are being used to evaluate mimetic convergence in forewing colour patterns between species. The wings were photographed under constant light conditions and the images were cleaned in Adobe Photoshop to remove the background and to repair any damage due to scale loss or tearing. Cleaned forewing images (.jpg) of the following species were included:
@@ -144,6 +142,11 @@ Harmonic power
 The seventh prompt requests the number of harmonics that the `efourier()` function should use. This number can be decided upon based on the previous boxplot, which is saved as a .pdf file ("Harmonic_power.pdf") in the output folder. In case all other harmonics need to be scaled against the first harmonic, choose one extra harmonic. In this case, seven harmonics would explain 99% of the variance in shape. To account for scaling against the first harmonic, the input should be "8":
 ```
 	Number of harmonics for Fourier analysis: 8
+```
+The eighth prompt inquires whether all the other harmonics should be scaled against the first harmonic (which is essentuially the centroid). Since we selected the eight harmonics, we will get descriptors for the seven harmonics at the expense of the first hasrmonics approximating 99% of the shape:
+
+```
+	Normalize the harmonics coefficients (y/n): y
 ```
 The `cleqEFA()` function provides the following outputs:
 
